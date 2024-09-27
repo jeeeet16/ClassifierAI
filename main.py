@@ -14,26 +14,26 @@ training_images, testing_images = training_images / 255.0, testing_images / 255.
 # Class names for CIFAR-10
 class_names = ['Plane', 'Car', 'Bird', 'Cat', 'Deer', 'Dog', 'Frog', 'Horse', 'Ship', 'Truck']
 
-# Visualize the first 16 training images
-for i in range(16):
-    plt.subplot(4, 4, i + 1)
-    plt.xticks([])
-    plt.yticks([])
-    plt.imshow(training_images[i], cmap=plt.cm.binary)
-    plt.xlabel(class_names[training_labels[i][0]])
+# Visualizing the first 16 training images
+# for i in range(16):
+#     plt.subplot(4, 4, i + 1)
+#     plt.xticks([])
+#     plt.yticks([])
+#     plt.imshow(training_images[i], cmap=plt.cm.binary)
+#     plt.xlabel(class_names[training_labels[i][0]])
 
-plt.show()
+# plt.show()
 
-# Limit the training and testing data
-training_images = training_images[:20000]
-training_labels = training_labels[:20000]
-testing_images = testing_images[:4000]
-testing_labels = testing_labels[:4000]
+# Limiting the training and testing data
+# training_images = training_images[:400000]
+# training_labels = training_labels[:400000]
+# testing_images = testing_images[:40000]
+# testing_labels = testing_labels[:40000]
 
-# Building the model
+# # Building the model
 # model = models.Sequential()
 
-# Correctly specifying input_shape in the first Conv2D layer
+# # Correctly specifying input_shape in the first Conv2D layer
 # model.add(layers.Conv2D(32, (3, 3), activation='relu', input_shape=(32, 32, 3))) 
 # model.add(layers.MaxPooling2D((2, 2)))
 # model.add(layers.Conv2D(64, (3, 3), activation='relu'))
@@ -43,10 +43,10 @@ testing_labels = testing_labels[:4000]
 # model.add(layers.Dense(64, activation='relu'))
 # model.add(layers.Dense(10, activation='softmax'))
 
-# Compiling the model
+# # Compiling the model
 # model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=["accuracy"])
 
-# Training the model
+# # Training the model
 # model.fit(training_images, training_labels, epochs=10, validation_data=(testing_images, testing_labels))
 
 # # Evaluating the model
@@ -54,7 +54,7 @@ testing_labels = testing_labels[:4000]
 # print(f"Loss = {loss}")
 # print(f"Accuracy = {accuracy}")
 
-# Saving the model in keras format
+# # Saving the model in keras format
 # model.save('image_classifier.keras')
 
 # Loading the model
